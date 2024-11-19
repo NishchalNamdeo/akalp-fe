@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Sidebar Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+  </head>
+  <body class="relative overflow-x-hidden">
+    <section class="main">
+      <!-- page1 -->
+      <section class="h-[60vh] w-[150vw] lg:h-screen lg:w-full relative">
+        <!-- overlay -->
+        <section
+          class="overlay w-full h-[60vh] lg:h-screen lg:w-full bg-[#a5595994] absolute"
+        >
+          <!-- Navbar -->
+          <header
+            class="h-[12vh] w-full lg:h-[14vh] flex justify-between items-center bg-[#ffffffb5] p-5 shadow-lg"
+          >
+            <section class="flex items-center">
+              <img
+                class="h-[14vh] lg:h-[18vh] lg:ml-10"
+                src="/AKALP-FINAL-LOGO-removebg-preview.png"
+                alt=""
+              />
+            </section>
+            <nav
+              class="hidden md:flex items-center text-black space-x-10 font-medium"
+            >
+              <a href="#" class="hover:text-red-600">Home</a>
+              <a href="#" class="hover:text-red-600">About</a>
+              <a href="#" class="hover:text-red-600">Services</a>
+              <a href="#" class="hover:text-red-600">Blog</a>
+              <a href="#" class="hover:text-red-600">FAQS</a>
+              <a
+                href="#"
+                class="bg-red-600 text-white px-3 py-2 rounded-md hover:bg-red-700"
+                >Contact</a
+              >
+            </nav>
+            <section class="md:hidden">
+              <!-- Mobile menu button -->
+              <button id="menu-button" class="text-gray-600 focus:outline-none">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-10 w-10"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                </svg>
+              </button>
+            </section>
+          </header>
+
+          <!-- Sidebar -->
+          <section
+            id="mobile-menu"
+            class="fixed top-0 right-0 h-[52vh] w-1/2 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out md:hidden"
+          >
+            <button
+              id="close-button"
+              class="absolute top-2 right-4 text-gray-600"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            <nav
+              class="flex flex-col items-center text-black space-y-5 mt-12 text-xl font-bold"
+            >
+              <a href="#" class="hover:text-red-600">Home</a>
+              <a href="#" class="hover:text-red-600">About</a>
+              <a href="#" class="hover:text-red-600">Services</a>
+              <a href="#" class="hover:text-red-600">FAQS</a>
+              <a href="#" class="hover:text-red-600">Blogs</a>
+              <a href="#" class="hover:text-red-600"></a>
+              <a
+                href="#"
+                class="bg-red-600 text-white px-3 py-2 rounded-md hover:bg-red-700"
+                >Contact</a
+              >
+            </nav>
+          </section>
+
+          <!-- Home -->
+          <section class="flex ml-10 mt-16 lg:ml-20 lg:mt-40">
+            <section class="h-22 w-5 lg:text-6xl lg:h-32 bg-red-700"></section>
+            <h1 class="text-white text-5xl font-bold lg:text-6xl">
+              Innovation for <br />Success
+            </h1>
+          </section>
+          <p
+            class="ml-16 mt-1 w-64 text-xs lg:w-96 flex lg:ml-28 font-semibold text-white"
+          >
+            We believe in the power of innovation to drive future success! Our
+            dedicated team is eager to learn about your project and deliver
+            creative solutions that stand out.
+          </p>
+          <section class="flex">
+            <button
+              class="px-8 ml-16 font-bold bg-red-700 rounded-md mt-3 lg:ml-28 text-white lg:px-10"
+            >
+              Get Started
+            </button>
+            <img
+              class="h-14 lg:h-16 ml-7 mt-2 bg-red-700 rounded-full"
+              src="/play_icon-removebg-preview.png"
+              alt=""
+            />
+          </section>
+        </section>
+        <img
+          class="h-[60vh] w-[150vw] lg:h-screen lg:w-full object-cover"
+          src="/colleagues-working-cozy-office-medium-shot.jpg"
+          alt=""
+        />
+      </section>
+
+      <!-- page2 -->
+      <section
+        class="page2 w-[150vw] lg:h-screen lg:w-full flex flex-col items-center"
+      >
+        <section class="container mx-auto px-4">
+          <!-- Heading Section -->
+          <section class="">
+            <p
+              class="w-[80vw] text-xl leading-6 mt-10 ml-[32vw] lg:mt-16 lg:ml-[29vw] lg:w-[40vw] text-center lg:text-2xl font-extralight text-red-500"
+            >
+              Explore our range of professional services designed to help your
+              business grow and succeed.
+            </p>
+          </section>
+
+          <section
+            class="box mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center justify-center"
+          >
+            <!-- web Research Card -->
+            <section
+              class="h-[40vh] border-2 text-white p-6 rounded-lg lg:h-[60vh] shadow-xl hover:scale-75 transition duration-300 ease-in-out transform hover:-translate-y-2"
+            >
+              <h2 class="text-3xl mb-4 font-bold text-red-500">Web Design</h2>
+              <p class="text-sm text-black lg:mb-7">
+                In today’s digital world, a well-designed website is essential
+                for any business.
+              </p>
+              <img
+                class="h-[20vh] ml-36 lg:h-[32vh] lg:ml-24"
+                src="/image.png"
+                alt=""
+              />
+              <section class="flex justify-center">
+                <section class="h-4 w-4 bg-red-500 rounded-full mr-2"></section>
+                <section class="h-4 w-4 bg-red-500 rounded-full mr-2"></section>
+                <section class="h-4 w-4 bg-red-500 rounded-full"></section>
+              </section>
+            </section>
+
+            <!-- graphic Marketing Card -->
+            <section
+              class="h-[40vh] border-2 text-white bg-red-500 p-6 rounded-lg lg:h-[60vh] shadow-xl hover:scale-75 transition duration-300 ease-in-out transform hover:-translate-y-2"
+            >
+              <h2 class="text-3xl mb-4 font-bold text-white">Graphic</h2>
+              <p class="text-sm text-white lg:mb-7">
+                Graphic design is more than just aesthetics; it’s about
+                communicating ideas effectively through visuals.
+              </p>
+              <img
+                class="h-[20vh] ml-36 lg:h-[32vh] lg:ml-24"
+                src="/undraw_Redesign_feedback_re_jvm0-removebg-preview.png"
+                alt=""
+              />
+              <section class="flex justify-center">
+                <section class="h-4 w-4 bg-white rounded-full mr-2"></section>
+                <section class="h-4 w-4 bg-white rounded-full mr-2"></section>
+                <section class="h-4 w-4 bg-white rounded-full"></section>
+              </section>
+            </section>
+
+            <!-- Market Analysis Card -->
+            <section
+              class="h-[40vh] border-2 text-white bg-white p-6 rounded-lg lg:h-[60vh] shadow-xl hover:scale-75 transition duration-300 ease-in-out transform hover:-translate-y-2"
+            >
+              <h2 class="text-3xl mb-4 font-bold text-red-500">Logo Design</h2>
+              <p class="text-sm text-red-500 lg:mb-7">
+                A logo is the face of your brand, and we believe it should
+                embody your values and vision.
+              </p>
+              <img
+                class="h-[20vh] ml-36 lg:h-[32vh] lg:ml-24"
+                src="/colleagues-working-cozy-office-medium-shot.png"
+                alt=""
+              />
+              <section class="flex justify-center">
+                <section class="h-4 w-4 bg-red-500 rounded-full mr-2"></section>
+                <section class="h-4 w-4 bg-red-500 rounded-full mr-2"></section>
+                <section class="h-4 w-4 bg-red-500 rounded-full"></section>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <!-- page3 -->
+      <section
+        class="page3 h-[83vh] p-8 mt-10 w-[150vw] lg:h-[80vh] lg:w-full rounded-b-[5vw] rounded-t-[5vw] bg-gradient-to-r from-red-500/80 to-white/90 lg:flex lg:items-center lg:justify-center text-white shadow-lg"
+      >
+        <section class="page3-div1 lg:h-[80vh] lg:w-[50vw]">
+          <h3 class="lg:mt-20 lg:ml-28">About Us</h3>
+          <h1 class="text-4xl mb-3 lg:ml-32 font-semibold">
+            Leading the <span class="text-red-600">Creative Digital</span>
+            <br />
+            Revolution
+          </h1>
+          <p class="w-[80vw] mb-5 lg:w-[30vw] lg:ml-32 lg:mt-8">
+            We are a top-tier digital agency dedicated to serving startups and
+            small businesses seeking a partner in digital media, design,
+            development, lead generation, and communication needs.
+          </p>
+          <p class="w-[89vw] lg:w-[25vw] lg:ml-32 lg:mt-5">
+            Our talented team of passionate consultants is deeply committed to
+            search engine marketing and digital strategies that drive results.
+          </p>
+        </section>
+        <section
+          class="page3-div2 flex justify-around lg:h-[80vh] lg:w-[50vw] relative"
+        >
+          <section
+            class="div1 mt-8 h-44 w-56 bg-red-700 lg:mt-12 lg:h-[36vh] lg:w-[25vw] lg:ml-44 object-cover"
+          >
+            <section
+              class="overlay h-44 w-56 lg:h-[37vh] lg:w-[25vw] bg-[#a45c5c6d] absolute"
+            ></section>
+            <img
+              class="object-cover h-44 lg:h-[37vh] lg:w-[26vw]"
+              src="https://plus.unsplash.com/premium_photo-1661764256397-af154e87b1b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </section>
+          <section
+            class="div2 mt-8 h-44 w-56 bg-red-600 lg:absolute lg:w-[16vw] lg:top-44"
+          >
+            <section
+              class="overlay h-44 w-56 lg:h-[40vh] lg:w-[16vw] bg-[#e67e7e6d] absolute"
+            ></section>
+            <img
+              class="object-cover h-44 w-56 lg:h-[40vh] lg:w-[16vw]"
+              src="https://plus.unsplash.com/premium_photo-1683872921964-25348002a392?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </section>
+        </section>
+      </section>
+
+      <!-- page4 -->
+      <section
+        id="page4"
+        class="h-[100vh] w-[150vw] py-16 lg:h-[90vh] lg:w-[100vw]"
+      >
+        <section class="container mx-auto px-6 lg:px-12">
+          <section class="text-center mb-8">
+            <h2 class="text-3xl lg:text-4xl font-bold text-red-500 mb-4">
+              How does it work?
+            </h2>
+          </section>
+
+          <!-- Timeline Content -->
+          <section class="lg:w-10/12 mx-auto">
+            <section class="timeline-container relative">
+              <ul class="relative border-l-2 border-red-500">
+                <!-- First Step -->
+                <li class="mb-10 pl-6">
+                  <section
+                    class="absolute w-6 h-6 bg-red-500 rounded-full -left-3"
+                  ></section>
+                  <h4 class="text-2xl font-bold text-red-500 mb-3">
+                    Explore Your Favorite Services
+                  </h4>
+                  <p class="text-black">
+                    Discover a wide range of digital marketing solutions
+                    tailored to elevate your brand. From SEO to social media
+                    marketing, our expertise covers everything you need to boost
+                    your online presence and engage your audience effectively.
+                  </p>
+                </li>
+
+                <!-- Second Step -->
+                <li class="mb-10 pl-6">
+                  <section
+                    class="absolute w-6 h-6 bg-red-500 rounded-full -left-3"
+                  ></section>
+                  <h4 class="text-2xl font-bold text-red-500 mb-3">
+                    Bookmark & Personalize Your Strategy
+                  </h4>
+                  <p class="text-black">
+                    Save your favorite services and create a custom marketing
+                    strategy that suits your business goals. Our tools allow you
+                    to tailor your approach, ensuring that you focus on what
+                    matters most to your brand’s growth and visibility.
+                  </p>
+                </li>
+
+                <!-- Third Step -->
+                <li class="pl-6">
+                  <section
+                    class="absolute w-6 h-6 bg-red-500 rounded-full -left-3"
+                  ></section>
+                  <h4 class="text-2xl font-bold text-red-500 mb-3">
+                    Read & Stay Informed
+                  </h4>
+                  <p class="text-black">
+                    Dive into our resource library filled with insightful
+                    articles, case studies, and industry news. Stay updated with
+                    the latest trends in digital marketing to enhance your
+                    skills and knowledge, helping you make informed decisions
+                    for your business.
+                  </p>
+                </li>
+              </ul>
+            </section>
+          </section>
+
+          <!-- Call-to-Action -->
+          <section class="text-center mt-12">
+            <p class="text-red-500">
+              <a
+                href="#"
+                class="btn px-6 py-3 bg-red-600 text-white font-medium rounded-md hover:bg-red-700 transition-all"
+              >
+                Contact Us
+              </a>
+            </p>
+          </section>
+        </section>
+      </section>
+
+      <!-- page5 -->
+      <section
+        class="page5 w-[150vw] lg:h-[125vh] lg:w-[100vw] bg-red-700 bg-gradient-to-r to-red-500/80 text-white shadow-lg"
+      >
+        <section>
+          <h1 class="text-center py-7 text-4xl text-white font-semibold">
+            Our Exclusive Services
+          </h1>
+          <p class="w-11/12 mx-auto lg:w-[35vw] text-center">
+            Don't settle: Don't finish copy books. If you don't like the menu,
+            leave the restaurant. If you're not on the right path, get off it.
+          </p>
+        </section>
+
+        <section class="flex flex-wrap items-center justify-center gap-4 p-4">
+          <section
+            class="h-[45vh] w-[90%] md:w-[40%] lg:w-[25%] shadow-2xl hover:translate-y-[-15px] transition-transform duration-300 ease-in-out"
+          >
+            <img
+              class="h-[38vh] w-full"
+              src="/marketing.png"
+              alt="Digital Branding"
+            />
+            <h1 class="text-center mt-2">Digital Branding</h1>
+          </section>
+          <section
+            class="h-[45vh] w-[90%] md:w-[40%] lg:w-[25%] shadow-2xl hover:translate-y-[-15px] transition-transform duration-300 ease-in-out"
+          >
+            <img
+              class="h-[38vh] w-full"
+              src="/business.png"
+              alt="Business Analytics"
+            />
+            <h1 class="text-center mt-2">Business Analytics</h1>
+          </section>
+          <section
+            class="h-[45vh] w-[90%] md:w-[40%] lg:w-[25%] shadow-2xl hover:translate-y-[-15px] transition-transform duration-300 ease-in-out"
+          >
+            <img
+              class="h-[38vh] w-10/12 mx-auto"
+              src="/strategy.png"
+              alt="Marketing Strategies"
+            />
+            <h1 class="text-center mt-2">Marketing Strategies</h1>
+          </section>
+          <section
+            class="h-[45vh] w-[90%] md:w-[40%] lg:w-[25%] shadow-2xl hover:translate-y-[-15px] transition-transform duration-300 ease-in-out"
+          >
+            <img
+              class="h-[38vh] w-full"
+              src="/project-removebg-preview.png"
+              alt="Project Management"
+            />
+            <h1 class="text-center mt-2">Project Management</h1>
+          </section>
+          <section
+            class="h-[45vh] w-[90%] md:w-[40%] lg:w-[25%] shadow-2xl hover:translate-y-[-15px] transition-transform duration-300 ease-in-out"
+          >
+            <img
+              class="h-[38vh] w-full"
+              src="/social-removebg-preview.png"
+              alt="Social Media Marketing"
+            />
+            <h1 class="text-center mt-2">Social Media Marketing</h1>
+          </section>
+          <section
+            class="h-[45vh] w-[90%] md:w-[40%] lg:w-[25%] shadow-2xl hover:translate-y-[-15px] transition-transform duration-300 ease-in-out"
+          >
+            <img
+              class="h-[38vh] w-10/12 mx-auto"
+              src="/solution-removebg-preview.png"
+              alt="Creative Solutions"
+            />
+            <h1 class="text-center mt-2">Creative Solutions</h1>
+          </section>
+        </section>
+      </section>
+
+      <!-- page6 -->
+      <section
+        class="page6 w-[150vw] bg-white lg:h-[100vh] lg:w-[100vw] px-4 py-8 lg:px-12"
+      >
+        <h1 class="text-4xl lg:text-5xl font-bold mt-10 ml-10 text-red-500">
+          Frequently Asked <br />
+          Questions
+        </h1>
+        <section
+          class="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10"
+        >
+          <!-- Image Section -->
+          <section class="w-full lg:w-1/2 flex items-center justify-center">
+            <img
+              src="/qustion.jpg"
+              alt="FAQ Illustration"
+              class="max-w-full h-[50vh] lg:h-[70vh]"
+            />
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="w-full lg:mt-20 lg:w-1/2 space-y-4">
+            <!-- Question 1 -->
+            <section class="faq-item border rounded-lg shadow-md">
+              <section
+                class="faq-header p-4 flex justify-between items-center cursor-pointer"
+                onclick="toggleFaq(1)"
+              >
+                <h2 class="text-base md:text-lg lg:text-xl font-semibold">
+                  What is Digital Marketing?
+                </h2>
+                <span class="arrow text-lg md:text-xl" id="arrow-1">▼</span>
+              </section>
+              <section
+                class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out"
+                id="content-1"
+              >
+                <p class="text-sm md:text-base p-4">
+                  <span class="text-lg text-gray-800 font-semibold"
+                    >Digital marketing</span
+                  >
+                  refers to the use of online channels and technologies to
+                  promote products or services and engage with customers. It
+                  encompasses a variety of strategies and tactics.
+                </p>
+              </section>
+            </section>
+
+            <!-- Question 2 -->
+            <section class="faq-item border rounded-lg shadow-md">
+              <section
+                class="faq-header p-4 flex justify-between items-center cursor-pointer"
+                onclick="toggleFaq(2)"
+              >
+                <h2 class="text-base md:text-lg lg:text-xl font-semibold">
+                  How it can be done?
+                </h2>
+                <span class="arrow text-lg md:text-xl" id="arrow-2">▼</span>
+              </section>
+              <section
+                class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out"
+                id="content-2"
+              >
+                <p class="text-sm md:text-base p-4">
+                  <span class="text-lg text-gray-800 font-semibold"
+                    >Digital marketing</span
+                  >
+                  can be effectively done by developing a strategic plan,
+                  building an optimized online presence, utilizing social media,
+                  creating valuable content, engaging in email marketing,
+                  running targeted PPC ads, leveraging analytics, and staying
+                  updated on industry trends.
+                </p>
+              </section>
+            </section>
+
+            <!-- Question 3 -->
+            <section class="faq-item border rounded-lg shadow-md">
+              <section
+                class="faq-header p-4 flex justify-between items-center cursor-pointer"
+                onclick="toggleFaq(3)"
+              >
+                <h2 class="text-base md:text-lg lg:text-xl font-semibold">
+                  How much it costs?
+                </h2>
+                <span class="arrow text-lg md:text-xl" id="arrow-3">▼</span>
+              </section>
+              <section
+                class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out"
+                id="content-3"
+              >
+                <p class="text-sm md:text-base p-4">
+                  <span class="text-lg text-gray-800 font-semibold"
+                    >Digital marketing</span
+                  >
+                  The cost of digital marketing varies depending on the strategy
+                  and scale of the campaign, ranging from a few hundred dollars
+                  for basic services to thousands for comprehensive campaigns.
+                </p>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <!-- page7 -->
+      <section
+        class="page7 lg:h-[100vh] w-[150vw] lg:w-[100vw] bg-[#202020] text-white h-screen py-12 overflow-hidden"
+      >
+        <section class="container mx-auto px-4 h-full">
+          <!-- Header Section -->
+          <section
+            class="flex lg:flex-row items-center justify-between mb-8 lg:ml-10"
+          >
+            <section>
+              <h2 class="text-red-500">Our Company Blog</h2>
+              <h1 class="text-4xl md:text-5xl font-bold mt-2">Latest News</h1>
+            </section>
+            <button
+              class="bg-red-500 rounded-md px-2 py-1 lg:px-5 lg:py-2 text-lg mt-4 lg:mt-0 hover:bg-red-800"
+            >
+              Add Blog
+            </button>
+          </section>
+
+          <!-- Swiper Slider -->
+          <section class="swiper-container h-[70vh] w-full">
+            <section class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <section
+                class="swiper-slide relative bg-gray-800 rounded-lg overflow-hidden shadow-md"
+              >
+                <img
+                  src="https://tse1.mm.bing.net/th?id=OIP.b_0yyxUSspRGAv0Xbq4ungHaE7&pid=Api&P=0&h=180"
+                  alt="Slide Image 1"
+                  class="w-full h-full object-cover"
+                />
+                <section
+                  class="absolute bottom-0 w-full bg-gradient-to-t from-black via-black/70 p-4"
+                >
+                  <section class="flex items-center mb-2">
+                    <span class="text-red-500">★ ★ ★</span>
+                    <span class="text-gray-400 ml-2">★ ★</span>
+                  </section>
+                  <h3 class="font-bold text-lg">
+                    Top Tools for Effective Time Tracking
+                  </h3>
+                  <a
+                    href="#"
+                    class="text-red-500 mt-2 inline-block hover:underline"
+                    >Read More</a
+                  >
+                </section>
+              </section>
+
+              <!-- Slide 2 -->
+              <section
+                class="swiper-slide relative bg-gray-800 rounded-lg overflow-hidden shadow-md"
+              >
+                <img
+                  src="https://storage.googleapis.com/website-production/uploads/2017/11/people-based-marketing.jpg"
+                  alt="Slide Image 2"
+                  class="w-full h-full object-cover"
+                />
+                <section
+                  class="absolute bottom-0 w-full bg-gradient-to-t from-black via-black/70 p-4"
+                >
+                  <section class="flex items-center mb-2">
+                    <span class="text-red-500">★ ★ ★</span>
+                    <span class="text-gray-400 ml-2">★ ★</span>
+                  </section>
+                  <h3 class="font-bold text-lg">
+                    Essential Tools for Crafting Proposals
+                  </h3>
+                  <a
+                    href="#"
+                    class="text-red-500 mt-2 inline-block hover:underline"
+                    >Read More</a
+                  >
+                </section>
+              </section>
+
+              <!-- Slide 3 -->
+              <section
+                class="swiper-slide relative bg-gray-800 rounded-lg overflow-hidden shadow-md"
+              >
+                <img
+                  src="https://via.placeholder.com/800x400"
+                  alt="Slide Image 3"
+                  class="w-full h-full object-cover"
+                />
+                <section
+                  class="absolute bottom-0 w-full bg-gradient-to-t from-black via-black/70 p-4"
+                >
+                  <section class="flex items-center mb-2">
+                    <span class="text-red-500">★ ★ ★</span>
+                    <span class="text-gray-400 ml-2">★ ★</span>
+                  </section>
+                  <h3 class="font-bold text-lg">
+                    Digital Agency Trends You Should Know
+                  </h3>
+                  <a
+                    href="#"
+                    class="text-red-500 mt-2 inline-block hover:underline"
+                    >Read More</a
+                  >
+                </section>
+              </section>
+
+              <!-- Slide 4 -->
+              <section
+                class="swiper-slide relative bg-gray-800 rounded-lg overflow-hidden shadow-md"
+              >
+                <img
+                  src="https://via.placeholder.com/800x400"
+                  alt="Slide Image 4"
+                  class="w-full h-full object-cover"
+                />
+                <section
+                  class="absolute bottom-0 w-full bg-gradient-to-t from-black via-black/70 p-4"
+                >
+                  <section class="flex items-center mb-2">
+                    <span class="text-red-500">★ ★ ★</span>
+                    <span class="text-gray-400 ml-2">★ ★</span>
+                  </section>
+                  <h3 class="font-bold text-lg">
+                    Future of Marketing Strategies
+                  </h3>
+                  <a
+                    href="#"
+                    class="text-red-500 mt-2 inline-block hover:underline"
+                    >Read More</a
+                  >
+                </section>
+              </section>
+            </section>
+
+            <!-- Pagination -->
+          </section>
+        </section>
+      </section>
+
+      <!-- page8 -->
+      <section
+        class="page8 h-[80vh] w-[150vw] lg:h-[100vh] lg:w-[100vw] flex items-center justify-center lg:ml-3"
+      >
+        <section
+          class="page8 h-[70vh] w-[150vw] lg:h-[90vh] lg:w-[90vw] lg:bg-red-700 lg:rounded-r-full lg:rounded-t-full lg:py-5 text-center"
+        >
+          <h5 class="text-black lg:text-white">Let's Connect</h5>
+          <h1 class="text-4xl font-bold mt-2 text-black lg:text-white">
+            Get in Touch
+          </h1>
+          <section
+            class="w-[150vw] h-[70vh] lg:w-[60vw] lg:ml-56 lg:mt-10 flex items-center justify-center"
+          >
+            <form action="" class="space-y-6">
+              <!-- Row 1: Name and Email -->
+              <section class="flex flex-col md:flex-row gap-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  required
+                  class="flex-1 w-[90vw] p-3 lg:w-[30vw] rounded text-white placeholder-gray-400 border border-gray-600 focus:ring-2 focus:ring-red-500"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                  class="flex-1 p-3 rounded text-white placeholder-gray-400 border border-gray-600 focus:ring-2 focus:ring-red-500"
+                />
+              </section>
+              <!-- Row 2: Phone and Subject -->
+              <section class="flex flex-col md:flex-row gap-4">
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Phone"
+                  required
+                  class="flex-1 p-3 rounded text-white placeholder-gray-400 border border-gray-600 focus:ring-2 focus:ring-red-500"
+                />
+                <input
+                  type="text"
+                  name="city"
+                  placeholder="city"
+                  required
+                  class="flex-1 p-3 rounded text-white placeholder-gray-400 border border-gray-600 focus:ring-2 focus:ring-red-500"
+                />
+              </section>
+              <!-- Row 3: Message -->
+              <section>
+                <textarea
+                  name="message"
+                  placeholder="Send Message"
+                  required
+                  class="w-[90vw] p-3 lg:w-[60vw] rounded text-white placeholder-gray-400 border border-gray-600 focus:ring-2 focus:ring-red-500"
+                  rows="4"
+                ></textarea>
+              </section>
+              <!-- Submit Button -->
+              <section>
+                <button
+                  type="submit"
+                  class="p-10 mb-7 bg-red-700 text-black lg:bg-white lg:text-red-800 font-bold py-3 rounded hover:bg-red-600 transition-all duration-300"
+                >
+                  Submit
+                </button>
+              </section>
+            </form>
+          </section>
+        </section>
+      </section>
+
+      <!-- page9 -->
+      <section class="w-[150vw]  h-[60vh] lg:w-[100vw] bg-[#201e1e]">
+        <!-- Footer Section -->
+        <footer class=" text-white ">
+          <section
+            class="max-w-10xl mx-auto p-10 h-[60vh] px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            <!-- Company Section -->
+            <section class="ml-10">
+              <img
+                src="/AKALP-FINAL-LOGO-removebg-preview.png"
+                alt="Logo"
+                class=" h-[25vh] "
+              />
+              <p class="text-sm leading-6">
+                Feel free to adjust any specific details according to your
+                company's branding and offerings!
+              </p>
+            </section>
+
+            <!-- Basic Links -->
+            <section class="ml-64 mt-10">
+              <h3 class="text-lg font-bold mb-4">Basic links</h3>
+              <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-red-400">Home</a></li>
+                <li><a href="#" class="hover:text-red-400">About</a></li>
+                <li><a href="#" class="hover:text-red-400">Services</a></li>
+                <li><a href="#" class="hover:text-red-400">Blog</a></li>
+                <li><a href="#" class="hover:text-red-400">FAQS</a></li>
+                <li><a href="#" class="hover:text-red-400">Contact</a></li>
+              </ul>
+            </section>
+
+
+             <!-- Headoffice Section -->
+             <section class="ml-36 mt-10">
+              <h3 class="text-lg font-bold mb-4">Head Office</h3>
+              <section class="h-32 w-44 bg-red-700">
+                
+              </section>
+              <p class="text-sm leading-6 mb-4 w-52" >
+                Shriram Apartment, 9/2,  Malviya Nagar, Bhopal, Madhya Pradesh 462001
+              </p>
+             
+            </section>
+
+            <!-- Contact Section -->
+            <section class="ml-24 mt-10">
+              <h3 class="text-lg font-bold mb-4">Contact</h3>
+              <ul class="text-sm space-y-2">
+                <li>akalp@gmail.com</li>
+                <li>+99 745484 455</li>
+              </ul>
+              <section class="mt-4 flex space-x-3">
+                <a
+                  href="#"
+                  class="w-8 h-8 flex items-center justify-center bg-red-500 text-white rounded-full"
+                  >F</a
+                >
+                <a
+                  href="#"
+                  class="w-8 h-8 flex items-center justify-center bg-red-500 text-white rounded-full"
+                  >T</a
+                >
+                <a
+                  href="#"
+                  class="w-8 h-8 flex items-center justify-center bg-red-500 text-white rounded-full"
+                  >in</a
+                >
+                <a
+                  href="#"
+                  class="w-8 h-8 flex items-center justify-center bg-red-500 text-white rounded-full"
+                  >IN</a
+                >
+              </section>
+            </section>
+
+           
+            
+            <section class="flex  w-[100vw] ">
+              <p class="text-sm text-gray-400 mt- ml-10">
+                &copy; 2023 AKALP. All rights reserved.
+              </p>
+              <ul class="flex gap-4 ml-[64vw]">
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-red-400"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-red-400">Terms & Conditions</a>
+                </li>
+              </ul>
+            </section>
+          </section>
+
+         
+        </footer>
+      </section>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
